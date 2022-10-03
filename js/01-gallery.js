@@ -35,7 +35,10 @@ const instance = {
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
         console.log(e);
-        instance.close();
+        // instance.hide();
+        instance.close(() =>
+          window.removeEventListener("keydown", this.openImageInModal)
+        );
       }
     });
   },

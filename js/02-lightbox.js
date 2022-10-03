@@ -12,7 +12,7 @@ const render = galleryItems
   )
   .join("");
 gallery.insertAdjacentHTML("beforeend", render);
-var lightbox = new SimpleLightbox(".gallery__item", {
+let lightbox = new SimpleLightbox(".gallery__item", {
   caption: true,
   captionSelector: "img",
   captionPosition: "button",
